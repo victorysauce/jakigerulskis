@@ -972,25 +972,25 @@
     .nav-hamburger { display: flex; }
     .nav-links { display: none; }
 
-    /* Hero */
-    .hero { padding: 40px 20px; }
-    .zine-tags { display: none; }
-
-    /* Featured strip */
-    .featured-strip { padding: 40px 20px; }
-    .work-grid { grid-template-columns: 1fr; }
+    /* Hero images full-width */
+    .featured-strip { padding: 0; }
+    .work-grid { grid-template-columns: 1fr; gap: 2px; }
+    #home .btn { margin: 24px 20px 0; }
 
     /* Page padding — 80px top gives breathing room below the fixed nav */
     .page { padding-top: 60px; }
     #home { padding-top: 0; }
     #work { padding: 80px 0 40px; }
-    #work .page-header { margin: 0 20px !important; }
+    #work .page-header { padding-left: 36px; margin-left: 20px; }
     #work > div { padding: 0 !important; }
     #work .series-filter { padding: 0 20px; margin-top: 32px; }
-    #about, #shop, #contact, #blog { padding: 80px 12px 40px; }
-    #postcards-signup { padding: 80px 12px 40px; }
+    #about, #shop, #contact, #blog { padding: 80px 20px 40px; }
+    #postcards-signup { padding: 80px 20px 40px; }
     #about > div, #blog > div, #contact > div, #postcards-signup > div { padding: 0 !important; }
-    .page-header { margin-bottom: 32px; }
+
+    /* Sitewide body text padding */
+    .page-header { margin-bottom: 32px; padding-left: 16px; }
+    p, .about-text p, .events-intro, .blog-excerpt { padding: 0 4px; }
 
     /* Work gallery */
     .gallery-masonry { columns: 1; column-gap: 0; }
@@ -1001,7 +1001,8 @@
       grid-template-columns: 1fr;
       gap: 32px;
     }
-    .about-portrait { position: static; }
+    .about-portrait { position: static; max-width: 60%; margin: 0 auto; }
+    
 
     /* Shop */
     .inquiry-form { padding: 24px 20px; }
@@ -1125,7 +1126,7 @@
 
 <!-- ══ WORK ══ -->
 <div class="page" id="work">
-  <div class="page-header" style="margin: 0 40px 0;">
+  <div class="page-header">
     <h1>Work</h1>
   </div>
   <div style="padding: 0 40px;">
