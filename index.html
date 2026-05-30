@@ -668,6 +668,50 @@
     text-decoration: none;
   }
 
+  /* ── CONTACT PAGE ── */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    max-width: 900px;
+    margin-top: 48px;
+    align-items: start;
+  }
+  .contact-info h3 {
+    font-family: var(--oswald);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 20px;
+  }
+  .contact-info p {
+    color: rgba(242,237,227,0.6);
+    font-size: 15px;
+    line-height: 1.75;
+    margin-bottom: 32px;
+  }
+  .contact-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    text-decoration: none;
+    transition: gap 0.2s;
+  }
+  .contact-link:hover { gap: 20px; }
+  .contact-link-label {
+    font-family: var(--oswald);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(242,237,227,0.3);
+    width: 80px;
+  }
+  .contact-link-value { font-size: 14px; color: var(--cream); }
+  .contact-link:hover .contact-link-value { color: var(--teal); }
+
   /* ── FOOTER ── */
   footer {
     border-top: 1px solid rgba(255,255,255,0.07);
@@ -981,7 +1025,7 @@
     .page { padding-top: 60px; }
     #home { padding-top: 0; }
     #work { padding: 80px 0 40px; }
-    #work .page-header { padding-left: 36px; margin-left: 20px; }
+    #work .page-header { margin-left: 20px; }
     #work > div { padding: 0 !important; }
     #work .series-filter { padding: 0 20px; margin-top: 32px; }
     #about, #shop, #contact, #blog { padding: 80px 20px 40px; }
