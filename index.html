@@ -57,7 +57,7 @@
 
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=DM+Sans:ital,wght@0,400;0,500;1,400&family=Source+Serif+4:ital@1&display=swap" rel="stylesheet">
 <style>
   :root {
     --blue: #2448C8;
@@ -142,6 +142,7 @@
     min-height: 100vh;
     padding-top: 72px;
   }
+  #home { padding-top: 0; }
   .page.active { display: block; }
 
   /* ── HOME ── */
@@ -151,13 +152,7 @@
   }
 
   .hero {
-    min-height: 40vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 60px 40px 16px;
-    position: relative;
-    background: var(--black);
+    display: none;
   }
 
   /* Diagonal rule accent */
@@ -987,6 +982,7 @@
 
     /* Page padding — 80px top gives breathing room below the fixed nav */
     .page { padding-top: 60px; }
+    #home { padding-top: 0; }
     #work, #about, #shop, #contact, #blog { padding: 80px 20px 40px; }
     #about { max-width: 100%; }
     .page-header { margin-bottom: 32px; }
@@ -1088,11 +1084,6 @@
 <!-- ══ HOME ══ -->
 <div class="page active" id="home">
   <div class="hero">
-    <div class="zine-tags">
-      <span class="ztag ztag-teal">Infrared</span>
-      <span class="ztag ztag-pink">Street</span>
-      <span class="ztag ztag-blue">Lisbon</span>
-    </div>
   </div>
 
   <div class="featured-strip">
@@ -1605,8 +1596,11 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">Jaki Gerulskis</div>
-  <div class="footer-copy">Photographer based in Lisbon</div>
+  <div>
+    <div class="footer-logo">Jaki Gerulskis</div>
+    <div class="footer-copy" style="margin-top: 4px; font-family: 'Source Serif 4', serif; font-style: italic;">Photographer based in Lisbon</div>
+    <div class="footer-copy" style="margin-top: 2px; text-align: center;">© 2026 Jaki Gerulskis</div>
+  </div>
   <div class="footer-links">
     <a href="#" onclick="showPage('work')">Work</a>
     <a href="#" onclick="showPage('contact')">Contact</a>
