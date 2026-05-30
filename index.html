@@ -151,11 +151,11 @@
   }
 
   .hero {
-    min-height: calc(100vh - 72px);
+    min-height: 40vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding: 60px 40px;
+    padding: 60px 40px 16px;
     position: relative;
     background: var(--black);
   }
@@ -172,41 +172,13 @@
 
   .hero-eyebrow {
     font-family: var(--oswald);
-    font-size: 11px;
-    letter-spacing: 0.22em;
+    font-size: 22px;
+    letter-spacing: 0.18em;
     color: var(--teal);
     text-transform: uppercase;
-    margin-bottom: 16px;
+    margin-bottom: 32px;
     transform: rotate(-1deg);
     display: inline-block;
-  }
-
-  .hero-title {
-    font-family: var(--oswald);
-    font-weight: 700;
-    font-size: clamp(72px, 12vw, 160px);
-    line-height: 0.85;
-    text-transform: uppercase;
-    letter-spacing: -0.01em;
-    margin-bottom: 24px;
-  }
-
-  .hero-title .line1 { color: var(--cream); display: block; }
-  .hero-title .line2 { 
-    color: var(--pink); 
-    display: block;
-    -webkit-text-stroke: 2px var(--pink);
-    color: transparent;
-  }
-  .hero-title .line2.filled { color: var(--pink); -webkit-text-stroke: 0; }
-
-  .hero-sub {
-    font-family: var(--dm);
-    font-size: 14px;
-    color: rgba(242,237,227,0.5);
-    letter-spacing: 0.04em;
-    margin-bottom: 48px;
-    font-style: italic;
   }
 
   .hero-cta {
@@ -268,8 +240,7 @@
 
   /* Featured work strip */
   .featured-strip {
-    border-top: 1px solid rgba(255,255,255,0.08);
-    padding: 60px 40px;
+    padding: 32px 40px 60px;
   }
   .strip-label {
     font-family: var(--oswald);
@@ -1008,7 +979,6 @@
 
     /* Hero */
     .hero { padding: 40px 20px; }
-    .hero-title { font-size: clamp(56px, 18vw, 100px); }
     .zine-tags { display: none; }
 
     /* Featured strip */
@@ -1124,18 +1094,9 @@
       <span class="ztag ztag-blue">Lisbon</span>
     </div>
     <p class="hero-eyebrow">Photography by Jaki Gerulskis</p>
-    <h1 class="hero-title">
-      <span class="line1">Victory</span>
-      <span class="line2" id="hero-line2">Sauce</span>
-    </h1>
-    <p class="hero-sub">Lisbon · Street · Infrared · Documentary</p>
-    <div class="hero-cta">
-      <a class="btn btn-primary" href="#" onclick="showPage('work')">View Work</a>
-    </div>
   </div>
 
   <div class="featured-strip">
-    <p class="strip-label">Selected Work</p>
     <div class="work-grid">
       <div class="work-thumb" onclick="openLightbox('images/The_Fountain.jpg', 'The fountain of Piazza Castello shoots turquoise water in front of the clock tower of Castello Sforzesco, Milan. Infrared turns the sky and water a vivid teal while a lone tree glows hot pink to the right.', 'The Fountain, Milan, 2026')">
         <img src="images/The_Fountain.jpg" alt="The fountain of Piazza Castello shoots turquoise water in front of the clock tower of Castello Sforzesco, Milan. Infrared turns the sky and water a vivid teal while a lone tree glows hot pink to the right.">
@@ -1149,6 +1110,9 @@
       <div class="work-thumb" onclick="openLightbox('images/Calvin_Pose.jpg', 'A model stands by an open gate. He poses shirtless wearing a jacket.', 'Calvin Pose, Santa Joana Lisboa, 2024')">
         <img src="images/Calvin_Pose.jpg" alt="A model stands by an open gate. He poses shirtless wearing a jacket.">
       </div>
+    </div>
+    <div style="margin-top: 24px;">
+      <a class="btn btn-primary" href="#" onclick="showPage('work')">View All Work</a>
     </div>
   </div>
 
@@ -1766,18 +1730,6 @@
     }
     showPage(id, false);
   })();
-
-  // Hero text fill on scroll
-  window.addEventListener('scroll', () => {
-    const line2 = document.getElementById('hero-line2');
-    if (!line2) return;
-    const scrolled = window.scrollY;
-    if (scrolled > 80) {
-      line2.classList.add('filled');
-    } else {
-      line2.classList.remove('filled');
-    }
-  });
 
   // Gallery filter buttons
   document.querySelectorAll('.filter-btn').forEach(btn => {
