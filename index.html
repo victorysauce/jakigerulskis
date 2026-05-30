@@ -983,12 +983,18 @@
     /* Page padding — 80px top gives breathing room below the fixed nav */
     .page { padding-top: 60px; }
     #home { padding-top: 0; }
-    #work, #about, #shop, #contact, #blog { padding: 80px 20px 40px; }
-    #about { max-width: 100%; }
+    #work { padding: 80px 0 40px; }
+    #work .page-header { margin: 0 20px !important; }
+    #work > div { padding: 0 !important; }
+    #work .series-filter { padding: 0 20px; margin-top: 32px; }
+    #about, #shop, #contact, #blog { padding: 80px 12px 40px; }
+    #postcards-signup { padding: 80px 12px 40px; }
+    #about > div, #blog > div, #contact > div, #postcards-signup > div { padding: 0 !important; }
     .page-header { margin-bottom: 32px; }
 
     /* Work gallery */
-    .gallery-masonry { columns: 1; }
+    .gallery-masonry { columns: 1; column-gap: 0; }
+    .gallery-item { margin-bottom: 2px; }
 
     /* About */
     .about-grid {
